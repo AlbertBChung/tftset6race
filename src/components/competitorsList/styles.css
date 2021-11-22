@@ -1,0 +1,25 @@
+.competitors-list {
+    min-width: 400px;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  display: inline;
+  vertical-align: middle;
+  margin: 0px 8px;
+
+}
+
+.competitor-entry {
+    width: 100%;
+    background-color: white;
+    margin: 16px 0px;
+    border-radius: 8px;
+    color: #303030;
+    padding: 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
