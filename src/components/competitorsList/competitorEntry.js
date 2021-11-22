@@ -10,7 +10,7 @@ function CompetitorEntry(props) {
     <div className="competitor-entry">
         <span>
           {`${props.player.pos}.`}
-          <img className="avatar" src={props.player.img} />
+          <img className="avatar" src={props.player.img}  alt="player image"/>
           {`${props.player.name}` }
         </span>
         {stats}

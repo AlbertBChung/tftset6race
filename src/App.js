@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import background from './background.png';
 import './App.css';
 import Leaders from './components/leaders';
 import CompetitorsList from './components/competitorsList';

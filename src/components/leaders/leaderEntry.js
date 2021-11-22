@@ -23,9 +23,9 @@ function LeaderEntry(props) {
       </div>);
   return (
     <div className="leader-entry">
-      <img className="leader-rank" src={rankLabels[props.player?.pos - 1]}/>
-      {props.isFirst ? <img className="leader-crown" src={crown} /> : null}
-      <img className="leader-avatar" src={props.player?.img} />
+      <img className="leader-rank" src={rankLabels[props.player?.pos - 1]} alt="top rank ticker"/>
+      {props.isFirst ? <img className="leader-crown" src={crown} alt="crown"/> : null}
+      <img className="leader-avatar" src={props.player?.img} alt="player image"/>
       {stats}
       <Goal player={props.player}/>
     </div>
