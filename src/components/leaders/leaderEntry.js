@@ -27,7 +27,7 @@ function LeaderEntry(props) {
       {props.isFirst ? <img className="leader-crown" src={crown} alt="crown"/> : null}
       <img className="leader-avatar" src={props.player?.img} alt="player"/>
       {stats}
-      <Goal player={props.player}/>
+      <Goal styles={{ alignItems: 'center', color: '#D3D3D3' }} player={props.player}/>
     </div>
   );
 }

@@ -2,6 +2,7 @@
   "name": "tftset6race",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://localhost:3000",
   "dependencies": {
     "@ramonak/react-progress-bar": "^4.2.0",
     "@testing-library/jest-dom": "^5.11.4",

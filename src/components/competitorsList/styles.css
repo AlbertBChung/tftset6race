@@ -1,5 +1,6 @@
 .competitors-list {
-    min-width: 400px;
+  min-width: 300px;
+  width: 50%;
 }
 
 .avatar {
@@ -13,13 +14,13 @@
 }
 
 .competitor-entry {
-    width: 100%;
     background-color: white;
     margin: 16px 0px;
     border-radius: 8px;
-    color: #303030;
+    color: #404040;
     padding: 15px;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 24px;
     display: flex;
     justify-content: space-between;
 }

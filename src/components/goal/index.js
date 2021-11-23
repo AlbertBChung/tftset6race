@@ -1,8 +1,9 @@
 import ProgressBar from "@ramonak/react-progress-bar";
+import './styles.css';
 
 function Goal(props) {
   return (
-    <div>
+    <div className="goal" style={props.styles}>
       <ProgressBar 
         completed={props.player.progress} 
         animateOnRender
