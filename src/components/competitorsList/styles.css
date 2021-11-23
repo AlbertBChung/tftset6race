@@ -1,5 +1,5 @@
 .competitors-list {
-  min-width: 300px;
+  min-width: 330px  ;
   width: 50%;
 }
 
@@ -19,7 +19,7 @@
     border-radius: 8px;
     color: #404040;
     padding: 15px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 24px;
     display: flex;
     justify-content: space-between;
