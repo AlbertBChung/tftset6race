@@ -4,13 +4,13 @@ import './styles.css';
 function Goal(props) {
   return (
     <div className="goal" style={props.styles}>
-      <ProgressBar 
+      <ProgressBar
         completed={props.player.progress} 
         animateOnRender
         bgColor={'#669195'}
         isLabelVisible={true}
         height={'8px'}
-        width={'100px'}
+        width={'80px'}
         transitionDuration={'2s'}
         labelSize={'6px'}
       />
