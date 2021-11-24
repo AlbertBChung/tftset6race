@@ -8,7 +8,8 @@ import crown from './crown.png';
 const rankLabels = [one, two, three];
 function LeaderEntry(props) {
   if (!props.player) return null;
-  const stats = (props.player?.tier && props.player?.tier && props.player?.lp) ? (<div className="leader-desc">
+
+  const stats = (props.player?.tier && props.player?.rank && props.player?.lp !== undefined) ? (<div className="leader-desc">
   <p>
     {`${props.player?.pos}. `}
     {`${props.player?.name}` }

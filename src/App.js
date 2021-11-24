@@ -38,7 +38,7 @@ class App extends React.Component {
           return fetch(`https://na1.api.riotgames.com/tft/league/v1/entries/by-summoner/${summonerData.id}?api_key=${process.env.REACT_APP_RIOT_API_KEY}`)
             .then(res => res.json())
             .then(summonerData => {
-              const s = summonerData[0];
+              const s = summonerData.find(r => r.queueType === 'RANKED_TFT');
               if(!s) return {
                 img: p.avatarUrl,
                 name: p.ign,
@@ -52,12 +52,22 @@ class App extends React.Component {
                 lp: s.leaguePoints,
                 goal: p.goal,
               }
+            }).catch(e => {
+              console.log(e)
+              return null;
             })
-        }).catch(() => {
+        }).catch((e) => {
+          console.log(e)
           return null;
         })
     })
     Promise.all(promises).then((summonerData) => {    
+      if (summonerData.find(s => s === null) === null) {
+        this.setState({
+          players: undefined
+        });
+        return;
+      }
       const players = summonerData.map((s, index) => {
         s.pos = index+1;
         const rank = (Number(`${tierMapping[s.tier]}`) + Number(`${rankMapping[s.rank]}`)  + Number(`0.${s.lp}`)) || 0;
@@ -74,7 +84,6 @@ class App extends React.Component {
         s.pos = index+1;
       })
 
-
       this.setState({
         players
       });
@@ -82,12 +91,20 @@ class App extends React.Component {
   }
   
 
-  render(){    
-    return (
-      <div className="App">
+  render(){   
+    const ranking = this.state.players !== undefined ? (
+      <>
         <Leaders players={this.state.players.slice(0, 3)}/>
         <br/>
         <CompetitorsList players={this.state.players.slice(3, this.state.players.length)}/>
+      </>
+    ) : (
+      <span>{'we refreshed too much :( try again later'}</span>
+    );
+
+    return (
+      <div className="App">
+        {ranking}
         <br />
         <br />
         <br />
