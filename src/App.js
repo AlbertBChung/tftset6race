@@ -2,6 +2,7 @@ import './App.css';
 import Leaders from './components/leaders';
 import CompetitorsList from './components/competitorsList';
 import React from 'react';
+import Snowfall from 'react-snowfall'
 
 const tierMapping = {
   'CHALLENGER': 80,
@@ -103,6 +104,9 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <Snowfall 
+          snowflakeCount={80}
+        />
         {ranking}
         <br />
         <br />
