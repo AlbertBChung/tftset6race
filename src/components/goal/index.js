@@ -5,7 +5,7 @@ function Goal(props) {
   return (
     <div className="goal" style={props.styles}>
       <ProgressBar
-        completed={props.player.progress} 
+        completed={Math.round(props.player.progress)} 
         animateOnRender
         bgColor={'#669195'}
         isLabelVisible={true}

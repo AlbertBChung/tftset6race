@@ -72,10 +72,9 @@ class App extends React.Component {
         s.pos = index+1;
         const rank = (Number(`${tierMapping[s.tier]}`) + Number(`${rankMapping[s.rank]}`)  + Number(`0.${s.lp}`)) || 0;
         const goal = (Number(`${tierMapping[s.goal]}`) + Number(`${rankMapping['IV']}`));
-        s.progress = Math.min(Math.round(rank / goal * 100), 100);
+        s.progress = Math.min(rank / goal * 100, 100);
         return s;
       })
-
       players.sort((p1, p2) => {
         return p1.progress > p2.progress ? -1 : 1;
       });
