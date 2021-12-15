@@ -13,6 +13,9 @@
   font-size: 14px;
   position: relative;
   color: #D3D3D3;
+
+  -webkit-filter: drop-shadow(0px 0px 15px #2997ff);
+  filter: drop-shadow(0px 0px 15px #2997ff);
 }
 
 .leader-rank {
